@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Crime report dashboard</title>
+    <link
+  href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+  rel="stylesheet"
+/>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2> <span id="shield"><i class="ri-shield-keyhole-line"></i></span> Crime Report dashboard</h2>
+            <ul>
+                <li> <span><i class="ri-dashboard-horizontal-fill"></i></span> Dashboard</li>
+                <li> <span><i class="ri-file-chart-fill"></i></span> All Reports</li>
+                <li>  <span><i class="ri-mail-add-line"></i></span> new Report</li>
+                <li> <span><i class="ri-group-fill"></i></span> Criminal</li>
+                <li> <span><i class="ri-map-pin-line"></i></span>Locations</li>
+                <li> <span><i class="ri-bar-chart-2-fill"></i></span> Statics</li>
+                <li> <span><i class="ri-user-fill"></i></span> Users</li>
+                <li> <span><i class="ri-settings-line"></i></span> Setting</li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="navbar">
+                <h2>welcome Back, Admin </h2>
+                <div class="nav-right">
+                    <span><i class="ri-notification-line"></i></span>
+                    <span> <i class="ri-user-fill"></i> Admin</span>
+                </div>
+            </div>
+       <div class="cards">
+             <div class="card">
+                <h5>Total crimes</h5>
+                <h1 id="totalCases">0</h1>
+            </div>
+            <div class="card">
+                <h5>Solved cases</h5>
+                <h1 id="solvedCases">0</h1>
+            </div>
+            <div class="card">
+                <h5>Pending Cases</h5>
+                <h1 id="pendingCases">0</h1>
+            </div>
+            <div class="card">
+                <h5>Most dangerous Area</h5>
+                <h1 id="dangerousCity">Kanpur</h1>
+                
+            </div>
+       </div>
+       <div class="controls">
+        <input type="text" placeholder="Search crime..." class="search">
+        <select id="crimefilter">
+            <option>All crimes</option>
+            <option>Theft</option>
+            <option>Murder</option>
+            <option>Cyber Crime</option>
+            <option>Fruad</option>
+        </select>
+        <select id="crimefilter">
+            <option value="all">All Status</option> 
+            <option value="solved">Solved</option>
+            <option value="pending">Pending</option>
+        </select>
+        <button class="add-btn">
+            Search
+        </button>
+       </div>
+       <div id="form-container">
+        <input type="text" id="name" placeholder="Criminal Name">
+        <input type="text" id="crime" placeholder="Crime Type">
+        <input type="text" id="city" placeholder="Crime City">
+        <select id="status">
+            <option value="solved">Solved</option>
+            <option value="pending">pending</option>
+        </select>
+        <button id="add-report">
+            +Add report
+        </button>
+      
+       </div>
+
+    <div id="crime-container">
+
+    </div>
+  
+    </div> 
+<div class="chart-container">
+    <h2>Crime Status Analysis</h2>
+    <canvas id="crimeChart"></canvas>
+</div>
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,280 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-color: #0f172a;
+}
+.container{
+    display: flex;
+}
+ #shield{
+    color: white;
+}
+.sidebar{
+    width: 200px;
+    height: 100vh;
+    background-color: #020817;
+    color: white;
+    padding: 10px;
+    border-right: 1px solid #1e293b;
+}
+.sidebar h2{
+    margin-bottom: 40px;
+    color: #3b82f6;
+}
+.sidebar ul {
+    list-style: none;
+}
+.sidebar li{
+    padding: 10px;
+    margin: 15px 0;
+    background-color: #0f172a;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.sidebar li:hover{
+    background-color: #2563eb;
+}
+.main{
+    flex: 1;
+    padding: 20px;
+    color: white;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #020817;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #1e293b;
+}
+.nav-right{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-size: 18px;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+.card{
+    background-color: #020817;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #1e293b;
+}
+.card h3{
+    color: #94a3b8;
+    margin-bottom: 10px;
+}
+.card h1{
+    color: #3b82f9;
+}
+.controls{
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.search{
+    flex: 1;
+    padding: 15px;
+    border: none ;
+    outline: none;
+    border-radius: 10px;
+    background: #020817;
+    color: white;
+    border: 1px solid #1e293b;
+}
+#crimefilter{
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: #020817;
+    color: white;
+    border: 1px solid #1e293b;
+}
+.add-btn{
+    padding: 14px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.add-btn:hover{
+    transform: scale(1.05);
+    transition: .3s;
+}
+#crime-container{
+    margin-top: 25px;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    gap: 20px;
+}
+.crime-card{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    background: #020817;
+    border: 1px solid #1e293b;
+    border-radius: 15px;
+    padding: 20px;
+}
+.crime-card h3{
+    color: #3b82f6;
+    
+
+}
+.crime-card p{
+    margin: 10px 0;
+    color: white;
+}
+.crime-card button{
+    margin-top: 5px;
+    margin-right: 10px;
+    padding: 8px 15px;
+    border: none ;
+    border-radius: 8px;
+    cursor: pointer;
+}
+#form-container{
+     margin-top: 25px;
+    display: flex;
+    gap: 15px;
+    align-items: center;   
+}
+#form-container input{
+        padding: 15px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: #020817;
+    color: white;
+    border: 1px solid #1e293b;
+}
+#status{
+        padding: 15px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: #020817;
+    color: white;
+    border: 1px solid #1e293b;
+}
+#add-report{
+    padding: 14px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.chart-container{
+    width: 100%;
+    max-width: 500px;
+    margin: 30px auto;
+    background: #0f172a;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+#crimeChart{
+    width: 100% !important;
+    height: 350px !important;
+}
+.chart-container h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:white;
+    font-size:22px;
+}
+
+@media (max-width: 1024px) {
+    .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #1e293b;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+    }
+
+    .main {
+        padding: 15px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .controls,
+    #form-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .controls input,
+    .controls select,
+    .controls .add-btn,
+    #form-container input,
+    #form-container select,
+    #add-report {
+        width: 100%;
+    }
+
+    .controls {
+        gap: 12px;
+    }
+
+    #crime-container {
+        grid-template-rows: none;
+    }
+
+    .crime-card {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .crime-card button {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .chart-container {
+        padding: 20px;
+        margin: 20px 0;
+    }
+}
